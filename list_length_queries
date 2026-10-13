@@ -1,0 +1,14 @@
+?- list_length([],L).
+L = 0.
+
+?- list_length([],L).
+L = 0.
+
+?- list_length([a,b,c,d,e,f],L).
+L = 6.
+
+?- length([a,b,c,d,e,f],L).
+L = 6.
+
+?- length([],L).
+L = 0.

@@ -1,0 +1,11 @@
+?- concatenation([a,b,c],[d,e,f,g],L).
+L = [a, b, c, d, e, f, g].
+
+?- concatenation([a,b,c],L,[a,b,c,d,e,f,g]).
+L = [d, e, f, g].
+
+?- concatenation([a,b,c],[],L).
+L = [a, b, c].
+
+?- concatenation([],[],L).
+L = [].

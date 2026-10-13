@@ -1,0 +1,11 @@
+?- list_member(a,[a,b,c,d,e,f]).
+true .
+
+?- list_member(g,[a,b,c,d,e,f]).
+false.
+
+?- member(a,[a,b,c,d,e,f]). 
+true .
+
+?- member(g,[a,b,c,d,e,f]).
+false.
