@@ -10,3 +10,7 @@ This repository contains Prolog programs and practice exercises completed as par
 - List membership and union
 - Backtracking and logical reasoning
 - Other AI logic practice exercises
+
+## References
+
+TutorialsPoint – Prolog in AI (Video Tutorial)
