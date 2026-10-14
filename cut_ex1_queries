@@ -1,0 +1,21 @@
+[trace] 98 ?- max(200,100,X).
+   Call: (14) max(200, 100, _73298) ? creep
+   Call: (15) 200>=100 ? creep
+   Exit: (15) 200>=100 ? creep
+   Exit: (14) max(200, 100, 200) ? creep
+X = 200 ;
+   Redo: (14) max(200, 100, _73298) ? creep
+   Call: (15) 200<100 ? creep
+   Fail: (15) 200<100 ? creep
+   Fail: (14) max(200, 100, _73298) ? creep
+false.
+
+[trace] 98 ?- max_cut(200,100,X).
+   Call: (14) max_cut(200, 100, _85530) ? creep
+   Call: (15) 200>=100 ? creep
+   Exit: (15) 200>=100 ? creep
+ ? creep
+   Call: (15) _85530=200 ? creep
+   Exit: (15) 200=200 ? creep
+   Exit: (14) max_cut(200, 100, 200) ? creep
+X = 200.

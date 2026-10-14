@@ -1,0 +1,39 @@
+[trace] 100 ?- member(1,[1,2,3,1,4,1]).
+   Call: (14) member(1, [1, 2, 3, 1, 4, 1]) ? creep
+   Exit: (14) member(1, [1, 2, 3, 1, 4, 1]) ? creep
+true ;
+   Redo: (14) member(1, [1, 2, 3, 1, 4, 1]) ? creep
+   Call: (15) member(1, [2, 3, 1, 4, 1]) ? creep
+   Call: (16) member(1, [3, 1, 4, 1]) ? creep
+   Call: (17) member(1, [1, 4, 1]) ? creep
+   Exit: (17) member(1, [1, 4, 1]) ? creep
+   Exit: (16) member(1, [3, 1, 4, 1]) ? creep
+   Exit: (15) member(1, [2, 3, 1, 4, 1]) ? creep
+   Exit: (14) member(1, [1, 2, 3, 1, 4, 1]) ? creep
+true ;
+   Redo: (17) member(1, [1, 4, 1]) ? creep
+   Call: (18) member(1, [4, 1]) ? creep
+   Call: (19) member(1, [1]) ? creep
+   Exit: (19) member(1, [1]) ? creep
+   Exit: (18) member(1, [4, 1]) ? creep
+   Exit: (17) member(1, [1, 4, 1]) ? creep
+   Exit: (16) member(1, [3, 1, 4, 1]) ? creep
+   Exit: (15) member(1, [2, 3, 1, 4, 1]) ? creep
+   Exit: (14) member(1, [1, 2, 3, 1, 4, 1]) ? creep
+true ;
+   Redo: (19) member(1, [1]) ? creep
+   Call: (20) member(1, []) ? creep
+   Fail: (20) member(1, []) ? creep
+   Fail: (19) member(1, [1]) ? creep
+   Fail: (18) member(1, [4, 1]) ? creep
+   Fail: (17) member(1, [1, 4, 1]) ? creep
+   Fail: (16) member(1, [3, 1, 4, 1]) ? creep
+   Fail: (15) member(1, [2, 3, 1, 4, 1]) ? creep
+   Fail: (14) member(1, [1, 2, 3, 1, 4, 1]) ? creep
+false.
+
+[trace] 101 ?- member_cut(1,[1,2,3,1,4,1]).
+   Call: (14) member_cut(1, [1, 2, 3, 1, 4, 1]) ? creep
+ ? creep
+   Exit: (14) member_cut(1, [1, 2, 3, 1, 4, 1]) ? creep
+true.

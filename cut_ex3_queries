@@ -1,0 +1,19 @@
+[trace] 108 ?- add(1,[1,2,3,4],X).
+   Call: (14) add(1, [1, 2, 3, 4], _23598) ? creep
+   Call: (15) lists:member(1, [1, 2, 3, 4]) ? creep
+   Exit: (15) lists:member(1, [1, 2, 3, 4]) ? creep
+   Exit: (14) add(1, [1, 2, 3, 4], [1, 2, 3, 4]) ? creep
+X = [1, 2, 3, 4] ;
+   Redo: (15) lists:member(1, [1, 2, 3, 4]) ? creep
+   Fail: (15) lists:member(1, [1, 2, 3, 4]) ? creep
+   Redo: (14) add(1, [1, 2, 3, 4], _23598) ? creep
+   Exit: (14) add(1, [1, 2, 3, 4], [1, 1, 2, 3, 4]) ? creep
+X = [1, 1, 2, 3, 4].
+
+[trace] 109 ?- add_cut(1,[1,2,3,4],X).
+   Call: (14) add_cut(1, [1, 2, 3, 4], _36346) ? creep
+   Call: (15) lists:member(1, [1, 2, 3, 4]) ? creep
+   Exit: (15) lists:member(1, [1, 2, 3, 4]) ? creep
+ ? creep
+   Exit: (14) add_cut(1, [1, 2, 3, 4], [1, 2, 3, 4]) ? creep
+X = [1, 2, 3, 4].

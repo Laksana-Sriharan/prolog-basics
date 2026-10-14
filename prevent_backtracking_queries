@@ -1,0 +1,35 @@
+Before using cut
+
+?- trace.
+true.
+
+[trace] 91 ?- f(1,Y), 2<Y.
+   Call: (15) f(1, _10298) ? creep
+   Call: (16) 1<3 ? creep
+   Exit: (16) 1<3 ? creep
+   Exit: (15) f(1, 0) ? creep
+   Call: (15) 2<0 ? creep
+   Fail: (15) 2<0 ? creep
+   Redo: (15) f(1, _10298) ? creep
+   Call: (16) 6=<1 ? creep
+   Fail: (16) 6=<1 ? creep
+   Fail: (15) f(1, _10298) ? creep
+false.
+
+After using cut
+
+[trace]  ?- notrace.true.
+
+[debug]  ?- consult(['c:/Users/User/Documents/prolog-basics/prevent_backtracking.pl']).
+true.
+
+[debug] ?- trace.true.
+
+[trace] ?- f(1,Y), 2<Y.   Call: (15) f(1, _39000) ? creep
+   Call: (16) 1<3 ? creep
+   Exit: (16) 1<3 ? creep
+ ? creep
+   Exit: (15) f(1, 0) ? creep
+   Call: (15) 2<0 ? creep
+   Fail: (15) 2<0 ? creep
+false.
