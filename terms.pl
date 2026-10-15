@@ -83,3 +83,14 @@ true.
 
 % ground(X) - works if does not contain uninstantiated, also checks inside compound terms.
 
+?- ground(X).
+false.
+
+?- ground(a).
+true.
+
+?- ground(a(b,X)).
+false.
+
+?- ground([a,b,c]).
+true.
