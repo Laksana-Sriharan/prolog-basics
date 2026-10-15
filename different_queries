@@ -1,0 +1,5 @@
+?- different(100, 200).
+true.
+
+?- different(100, 100).
+false.
