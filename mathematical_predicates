@@ -1,0 +1,42 @@
+?- random(0,10,X).
+X = 7.
+
+?- between(0,10,X).
+X = 0 ;
+X = 1 ;
+X = 2 ;
+X = 3 ;
+X = 4 ;
+X = 5 ;
+X = 6 ;
+X = 7 ;
+X = 8 ;
+X = 9 ;
+X = 10.
+
+?- succ(2,X).
+X = 3.
+
+?- X is abs(-8).
+X = 8.
+
+?- X is max(10,5).
+X = 10.
+
+?- X is min(10,5).
+X = 5.
+
+?- X is round(10.78).
+X = 11.
+
+?- X is truncate(10.78).
+X = 10.
+
+?- X is floor(10.78).
+X = 10.
+
+?- X is ceiling(10.78).
+X = 11.
+
+?- X is sqrt(100).
+X = 10.0.
