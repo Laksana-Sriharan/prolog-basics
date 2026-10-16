@@ -1,0 +1,19 @@
+% When there are 2 disks.
+
+?- move(2,source,destination,auxiliary).
+Move top disk from source to auxiliary
+Move top disk from source to destination
+Move top disk from auxiliary to destination
+true .
+
+% When there are 3 disks.
+
+?- move(3,source,destination,auxiliary).
+Move top disk from source to destination
+Move top disk from source to auxiliary
+Move top disk from destination to auxiliary
+Move top disk from source to destination
+Move top disk from auxiliary to source
+Move top disk from auxiliary to destination
+Move top disk from source to destination
+true .
