@@ -1,0 +1,2 @@
+?- length(X,7), solution([w,w,w,w],X).
+X = [goat, nothing, wolf, goat, cabbage, nothing, goat].
