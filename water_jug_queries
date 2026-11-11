@@ -1,0 +1,40 @@
+?- water_jug(0,10).
+3L water jug is overflowed.
+true .
+
+?- water_jug(20,10).
+Both water jugs overflowed.
+true .
+
+?- water_jug(0,0).
+
+4L:0 & 3L:3 (Action: Fill 3L jug.)
+4L:3 & 3L:0 (Action: Pour water from 3L jug to 4L jug.)
+4L:3 & 3L:3 (Action: Fill 3L jug.)
+4L:4 & 3L:2 (Action: Pour water from 3L jug to 4L jug until 4L jug is full.)
+4L:0 & 3L:2 (Action: Empty 4L jug.)
+4L:2 & 3L:0 (Action: Pour water from 3L jug to 4L jug.)
+4L:2 & 3L:0 (Goal State Reached...)
+true .
+
+?- water_jug(0,0).
+
+4L:0 & 3L:3 (Action: Fill 3L jug.)
+4L:3 & 3L:0 (Action: Pour water from 3L jug to 4L jug.)
+4L:3 & 3L:3 (Action: Fill 3L jug.)
+4L:4 & 3L:2 (Action: Pour water from 3L jug to 4L jug until 4L jug is full.)
+4L:0 & 3L:2 (Action: Empty 4L jug.)
+4L:2 & 3L:0 (Action: Pour water from 3L jug to 4L jug.)
+4L:2 & 3L:0 (Goal State Reached...)
+true ;
+
+4L:4 & 3L:0 (Action: Fill 4L jug.)
+4L:1 & 3L:3 (Action: Pour water from 4L to 3L jug.)
+4L:1 & 3L:3 (Action: Empty 3L jug.)
+4L:0 & 3L:1 (Action: Pour water from 4L to 3L jug.)
+4L:4 & 3L:1 (Action: Fill 4L jug.)
+4L:2 & 3L:3 (Action: Pour water from 4L to 3L jug until 3L jug is full.)
+4L:2 & 3L:0 (Action: Empty 3L jug.)
+4L:2 & 3L:0 (Goal State Reached...)
+true ;
+false.
